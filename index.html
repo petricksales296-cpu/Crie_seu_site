@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crie seu site</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#222;
+}
+
+header{
+background:#fff;
+padding:20px;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+header h1{
+color:#2e7d32;
+margin-bottom:10px;
+}
+
+header p{
+color:#555;
+}
+
+main{
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+section{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+h2{
+margin-bottom:15px;
+color:#2e7d32;
+}
+
+textarea{
+width:100%;
+height:180px;
+padding:10px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+resize:vertical;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:10px;
+background:#2e7d32;
+color:white;
+border:none;
+border-radius:8px;
+font-size:17px;
+cursor:pointer;
+}
+
+button:hover{
+background:#256428;
+}
+
+.pix{
+background:#eeeeee;
+padding:15px;
+border-radius:8px;
+word-break:break-all;
+margin-bottom:10px;
+}
+
+ol li,
+ul li{
+margin:10px 0;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  
+  <img src="https://i.postimg.cc/RFgZ5J0n/1784068746349.png" width="300">
+
+<h1>Crie seu site</h1>
+
+<p>Eu faço seu site simples por apenas <b>R$30</b>.</p>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Descreva o site</h2>
+
+<textarea id="descricao" placeholder="Exemplo: Quero um site para minha barbearia com fotos, preços e botão do WhatsApp."></textarea>
+
+<button onclick="enviarWhatsapp()">
+Enviar descrição no WhatsApp
+</button>
+
+</section>
+
+<section>
+
+<h2>Como funciona</h2>
+
+<ol>
+<li>Descreva o site que você deseja.</li>
+<li>Envie a descrição pelo WhatsApp.</li>
+<li>Eu começo a desenvolver seu site.</li>
+<li>Quando estiver pronto eu aviso.</li>
+<li>você faz o pagamento, e recebe o site.</li>
+
+</ol>
+
+</section>
+
+<section>
+
+<h2>Tipos de site</h2>
+
+<ul>
+
+<li>✅ Loja virtual</li>
+<li>✅ Site para empresa</li>
+<li>✅ Portfólio</li>
+<li>✅ Barbearia</li>
+<li>✅ Restaurante</li>
+<li>✅ Igreja</li>
+<li>✅ Academia</li>
+<li>✅ Landing Page</li>
+<li>✅ Blog</li>
+<li>✅ Outro</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Contato</h2>
+
+<p>
+Fale diretamente comigo pelo WhatsApp.
+</p>
+
+<button onclick="abrirWhatsapp()">
+Abrir WhatsApp
+</button>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>© 2026 SiteBarato</p>
+
+</footer>
+
+<script>
+
+const numero="5511920719305";
+
+function enviarWhatsapp(){
+
+let texto=document.getElementById("descricao").value;
+
+if(texto.trim()==""){
+
+alert("Descreva o site que você deseja.");
+
+return;
+
+}
+
+let mensagem=
+"Olá! Quero um site.%0A%0ADescrição:%0A"+encodeURIComponent(texto);
+
+window.open(
+"https://wa.me/"+numero+"?text="+mensagem,
+"_blank"
+);
+
+}
+
+function abrirWhatsapp(){
+
+window.open(
+"https://wa.me/"+numero,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
